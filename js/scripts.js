@@ -45,4 +45,4 @@ $("#hideMe").hide();
 console.log("paragraf hidden");
 
 //zmień treść w jakimś elemencie
-$("p:last").text("nowy tekst wstawiony do paragrafu");
+$("p:last").text("Nowy tekst wstawiony do paragrafu");
