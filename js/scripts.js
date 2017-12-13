@@ -19,17 +19,24 @@ $("button").click(function(){
 });
 
 //dodaj klasę do elementu
-$("p:first").addClass("firstParagraf");
+$("<p>Dodaj klasę do elementu</p>").insertAfter("p:last");
+$("p:last").addClass("firstParagraf second");
 
 //usuń klasę z elementy
-$("p:nth(1)").removeClass("second");
+$("p:last").clone().insertAfter("p:last");
+$("p:last").text("Usuń klasę z elementu");
+$("p:last").removeClass("second");
 
 //dodaj jakiś atrybut (np. data-test) do elementu
-$("p:nth(2)").append().attr("data-test", "tested");
+$("p:last").clone().insertAfter("p:last");
+$("p:last").text("Dodaj jakiś atrybut (np. data-test) do elementu");
+$("p:last").append().attr("data-test", "tested");
 
 //pobierz wartosc jakiegos atrybutu
-var $classValue = $("p:nth(6)").attr("class");
-console.log("sixth paragraf - class value : " + $classValue);
+$("p:last").clone().insertAfter("p:last");
+$("p:last").text("Pobierz wartosc jakiegos atrybutu");
+var $classValue = $("p:last").attr("class");
+console.log("Paragraf class value : " + $classValue);
 
 //usuń element - usuwamy 9 paragraf
 $("p:nth(9)").remove();
